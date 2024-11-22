@@ -1,0 +1,17 @@
+<h2>Склади</h2>
+<table>
+  <tr>
+    <th>Номер складу</th>
+    <th>Адреса</th>
+    <th>Завідувач складом</th>
+    <th>Телефон</th>
+  </tr>
+  {% for warehouse in warehouses %}
+  <tr>
+    <td>{{ warehouse.id }}</td>
+    <td>{{ warehouse.address }}</td>
+    <td>{{ warehouse.manager }}</td>
+    <td>{{ warehouse.phone }}</td>
+  </tr>
+  {% endfor %}
+</table>

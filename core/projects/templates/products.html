@@ -1,0 +1,21 @@
+<h2>Товари</h2>
+<table>
+  <tr>
+    <th>Назва</th>
+    <th>Тип</th>
+    <th>Виробник</th>
+    <th>Склад</th>
+    <th>Кількість на складі</th>
+    <th>Ціна</th>
+  </tr>
+  {% for product in products %}
+  <tr>
+    <td>{{ product.name }}</td>
+    <td>{{ product.get_type_display }}</td>
+    <td>{{ product.manufacturer }}</td>
+    <td>{{ product.warehouse.address }}</td>
+    <td>{{ product.stock_quantity }}</td>
+    <td>{{ product.price }}</td>
+  </tr>
+  {% endfor %}
+</table>

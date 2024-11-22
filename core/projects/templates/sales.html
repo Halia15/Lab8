@@ -1,0 +1,19 @@
+<h2>Продажі</h2>
+<table>
+  <tr>
+    <th>Дата продажу</th>
+    <th>Клієнт</th>
+    <th>Товар</th>
+    <th>Кількість</th>
+    <th>Знижка</th>
+  </tr>
+  {% for sale in sales %}
+  <tr>
+    <td>{{ sale.sale_date }}</td>
+    <td>{{ sale.client.name }}</td>
+    <td>{{ sale.product.name }}</td>
+    <td>{{ sale.quantity }}</td>
+    <td>{{ sale.discount }}</td>
+  </tr>
+  {% endfor %}
+</table>
